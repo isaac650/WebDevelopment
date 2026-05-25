@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Elements Guide: Tags, Structure & SEO</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>  <!-- ← this was missing in your file -->
+
+<body>
+
+  <nav>
+    <a href="#top10">Top 10 Tags</a> |
+    <a href="#seo">SEO Tags</a> |
+    <a href="#grid">Grid</a> |
+    <a href="#anatomy">Anatomy</a> |
+    <a href="#structure">Structure</a> |
+    <a href="#boxmodel">Box Model</a> |
+    <a href="#positioning">Positioning</a> |
+    <a href="#fontsizes">Font Sizes</a>
+  </nav>
+
+  <header>
+    <h1>The Building Blocks of Every Webpage</h1>
+    <p>HTML structures the content of the web. Tags define meaning, elements create hierarchy, and attributes configure behavior.</p>
+  </header>
+
+  <main>
+
+    <!-- SECTION 1: Top 10 Tags -->
+    <section id="top10">
+      <h2>1. The 10 Most Useful HTML Tags</h2>
+      <p>These tags appear in virtually every project.</p>
+      <ol>
+        <li><strong>&lt;div&gt;</strong> — All-purpose block container for layout and grouping</li>
+        <li><strong>&lt;p&gt;</strong> — Paragraph of body text</li>
+        <li><strong>&lt;a&gt;</strong> — Anchor tag for hyperlinks, uses the href attribute</li>
+        <li><strong>&lt;img&gt;</strong> — Embeds an image, self-closing, always use alt</li>
+        <li><strong>&lt;ul&gt; / &lt;li&gt;</strong> — Unordered list and list items</li>
+        <li><strong>&lt;section&gt;</strong> — Semantic grouping of related content</li>
+        <li><strong>&lt;input&gt;</strong> — Form field, behavior changes with the type attribute</li>
+        <li><strong>&lt;button&gt;</strong> — Clickable control for actions</li>
+        <li><strong>&lt;span&gt;</strong> — Inline container for styling part of a text</li>
+        <li><strong>&lt;h1&gt; to &lt;h6&gt;</strong> — Six levels of headings for hierarchy</li>
+      </ol>
+    </section>
+
+    <!-- SECTION 2: SEO Tags -->
+    <section id="seo">
+      <h2>2. Most Important SEO Tags</h2>
+      <ul>
+        <li><strong>&lt;title&gt;</strong> — Clickable headline in Google results. Keep under 60 characters.</li>
+        <li><strong>&lt;meta name="description"&gt;</strong> — Summary shown under the title. Keep under 160 characters.</li>
+        <li><strong>&lt;meta name="viewport"&gt;</strong> — Required for mobile display and Google's mobile-first indexing.</li>
+        <li><strong>&lt;meta name="robots"&gt;</strong> — Controls whether Google indexes the page and follows its links.</li>
+        <li><strong>&lt;link rel="canonical"&gt;</strong> — Prevents duplicate content by pointing to the preferred URL.</li>
+        <li><strong>&lt;meta property="og:*"&gt;</strong> — Controls how the page appears when shared on social media.</li>
+        <li><strong>&lt;h1&gt; to &lt;h6&gt;</strong> — One h1 per page. Google uses heading hierarchy to understand structure.</li>
+        <li><strong>&lt;img alt="..."&gt;</strong> — Google reads alt text to understand image content.</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 3: 3x3 Grid -->
+    <section id="grid">
+      <h2>3. 3x3 Grid — divs and spans only</h2>
+      <p>Each <code>div</code> is a row (block element), each <code>span</code> is a cell (inline). No CSS or table needed.</p>
+
+      <div>
+        <span>Cell 1</span>
+        <span>Cell 2</span>
+        <span>Cell 3</span>
+      </div>
+      <div>
+        <span>Cell 4</span>
+        <span>Cell 5</span>
+        <span>Cell 6</span>
+      </div>
+      <div>
+        <span>Cell 7</span>
+        <span>Cell 8</span>
+        <span>Cell 9</span>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Anatomy -->
+    <section id="anatomy">
+      <h2>4. Anatomy of an HTML Document</h2>
+      <p>Every page needs a doctype, an <code>&lt;html&gt;</code> root, a <code>&lt;head&gt;</code> for metadata, and a <code>&lt;body&gt;</code> for content.</p>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;title&gt;My Webpage&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;Welcome to my site.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+      </pre>
+    </section>
+
+    <!-- SECTION 5: Page Structure -->
+    <section id="structure">
+      <h2>5. Page Structure &amp; Semantic HTML</h2>
+      <p>Semantic tags give your markup meaning. They tell browsers, search engines, and screen readers what each piece of content actually is.</p>
+      <ul>
+        <li><strong>&lt;nav&gt;</strong> — Navigation links</li>
+        <li><strong>&lt;header&gt;</strong> — Introductory content or logo area</li>
+        <li><strong>&lt;main&gt;</strong> — The primary content (only one per page)</li>
+        <li><strong>&lt;section&gt;</strong> — A thematic group of content</li>
+        <li><strong>&lt;article&gt;</strong> — Self-contained content like a blog post</li>
+        <li><strong>&lt;aside&gt;</strong> — Sidebar or supplementary content</li>
+        <li><strong>&lt;footer&gt;</strong> — Bottom of page content</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 6: Box Model Gallery -->
+    <section id="boxmodel">
+      <h2>6. CSS Box Model Gallery</h2>
+      <p>Every element is a box made of four layers: content, padding, border, and margin. Each row below changes one property. Each column shows a different value.</p>
+
+      <!-- Column headers -->
+      <div class="gallery-headers">
+        <div class="header-spacer"></div>
+        <div class="col-header">0px</div>
+        <div class="col-header">10px</div>
+        <div class="col-header">20px</div>
+      </div>
+
+      <!-- Row 1: Margin -->
+      <div class="gallery-row">
+        <div class="row-label">
+          <span class="property-name">margin</span>
+          <span class="property-desc">Space outside the border. Pushes other elements away.</span>
+        </div>
+        <div class="cell">
+          <div class="outer"><div class="box margin-0">content</div></div>
+          <code>margin: 0px</code>
+        </div>
+        <div class="cell">
+          <div class="outer"><div class="box margin-10">content</div></div>
+          <code>margin: 10px</code>
+        </div>
+        <div class="cell">
+          <div class="outer"><div class="box margin-20">content</div></div>
+          <code>margin: 20px</code>
+        </div>
+      </div>
+
+      <!-- Row 2: Padding -->
+      <div class="gallery-row">
+        <div class="row-label">
+          <span class="property-name">padding</span>
+          <span class="property-desc">Space inside the border. Grows the box from within.</span>
+        </div>
+        <div class="cell">
+          <div class="outer"><div class="box padding-0">content</div></div>
+          <code>padding: 0px</code>
+        </div>
+        <div class="cell">
+          <div class="outer"><div class="box padding-10">content</div></div>
+          <code>padding: 10px</code>
+        </div>
+        <div class="cell">
+          <div class="outer"><div class="box padding-20">content</div></div>
+          <code>padding: 20px</code>
+        </div>
+      </div>
+
+      <!-- Row 3: Border -->
+      <div class="gallery-row">
+        <div class="row-label">
+          <span class="property-name">border</span>
+          <span class="property-desc">The line drawn around the padding and content.</span>
+        </div>
+        <div class="cell">
+          <div class="outer"><div class="box border-0">content</div></div>
+          <code>border: 0px solid</code>
+        </div>
+        <div class="cell">
+          <div class="outer"><div class="box border-5">content</div></div>
+          <code>border: 5px solid</code>
+        </div>
+        <div class="cell">
+          <div class="outer"><div class="box border-10">content</div></div>
+          <code>border: 10px solid</code>
+        </div>
+      </div>
+
+      <!-- Row 4: Combined -->
+      <div class="gallery-row">
+        <div class="row-label">
+          <span class="property-name">combined</span>
+          <span class="property-desc">Margin, padding, and border all applied together.</span>
+        </div>
+        <div class="cell">
+          <div class="outer"><div class="box combined-sm">content</div></div>
+          <code>small values</code>
+        </div>
+        <div class="cell">
+          <div class="outer"><div class="box combined-md">content</div></div>
+          <code>medium values</code>
+        </div>
+        <div class="cell">
+          <div class="outer"><div class="box combined-lg">content</div></div>
+          <code>large values</code>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SECTION 7: CSS Positioning -->
+    <section id="positioning">
+      <h2>7. CSS Positioning</h2>
+      <p>Four modes demonstrated below. The footer uses <strong>fixed</strong> to stay pinned to the bottom of the screen.</p>
+
+      <!-- CARD 1: static -->
+      <div class="pos-card">
+        <div class="pos-label">position: static</div>
+        <div class="pos-demo static-demo">
+          <div class="pos-box static-box">I am static</div>
+        </div>
+        <p class="pos-explanation">
+          Default for every element — sits in normal document flow. <code>top</code> / <code>left</code> / <code>right</code> / <code>bottom</code> have no effect. Use when you need no special positioning at all.
+        </p>
+      </div>
+
+      <!-- CARD 2: relative -->
+      <div class="pos-card">
+        <div class="pos-label">position: relative</div>
+        <div class="pos-demo relative-demo">
+          <div class="pos-box">Normal flow</div>
+          <div class="pos-box relative-box">Nudged 20px down &amp; right</div>
+          <div class="pos-box">Normal flow</div>
+        </div>
+        <p class="pos-explanation">
+          Stays in the flow but nudged with <code>top</code> / <code>left</code> — the original space is still reserved. Use for fine-tuning alignment or as an anchor for absolute children.
+        </p>
+      </div>
+
+      <!-- CARD 3: absolute -->
+      <div class="pos-card">
+        <div class="pos-label">position: absolute</div>
+        <div class="pos-demo absolute-demo">
+          <p>Normal paragraph text.</p>
+          <div class="pos-box absolute-box">Pinned to top-right</div>
+          <p>The absolute box is out of the flow — this text ignores it.</p>
+        </div>
+        <p class="pos-explanation">
+          Removed from the flow entirely, positioned relative to the nearest <code>position: relative</code> ancestor. Use for badges, tooltips, or overlaid labels.
+        </p>
+      </div>
+
+      <!-- CARD 4: sticky -->
+      <div class="pos-card">
+        <div class="pos-label">position: sticky</div>
+        <div class="pos-demo sticky-demo">
+          <div class="sticky-box">I stick to the top when you scroll past me</div>
+          <p>Scroll within this container to see it lock to the top edge.</p>
+          <p>More content to make the container scrollable...</p>
+        </div>
+        <p class="pos-explanation">
+          Scrolls normally until it hits a threshold (e.g. <code>top: 0</code>), then locks in place. Use for sticky table headers or filter bars.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- SECTION 8: Font Sizes — Absolute & Relative Units -->
+    <section id="fontsizes">
+      <h2>8. Font Sizes — Absolute &amp; Relative Units</h2>
+      <p>Absolute units are fixed. Relative units scale based on context.</p>
+
+      <ul class="font-size-list">
+
+        <li style="font-size: 12px;">
+          <strong>12px — absolute</strong>
+          <em>Use for: fine print, UI labels, anything that must never scale.</em>
+        </li>
+
+        <li style="font-size: 1.5cm;">
+          <strong>1.5cm — absolute</strong>
+          <em>Use for: print layouts like CVs or invoices where physical size matters.</em>
+        </li>
+
+        <li style="font-size: 1em;">
+          <strong>1em — relative to parent</strong>
+          <em>Use for: component internals — padding and text that should scale together.</em>
+        </li>
+
+        <li style="font-size: 1.5rem;">
+          <strong>1.5rem — relative to root</strong>
+          <em>Use for: page-wide type sizes — consistent across all nesting levels.</em>
+        </li>
+
+        <li style="font-size: 120%;">
+          <strong>120% — relative to parent</strong>
+          <em>Use for: sub-headings that should always read slightly larger than body text.</em>
+        </li>
+
+        <li style="font-size: 3vw;">
+          <strong>3vw — relative to viewport width</strong>
+          <em>Use for: hero headlines that fluidly fill the screen on any device.</em>
+        </li>
+
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>This is the footer of this webpage.</p>
+    <ul>
+      <li><a href="#top10">Top 10 Tags</a></li>
+      <li><a href="#seo">SEO Tags</a></li>
+      <li><a href="#grid">3x3 Grid</a></li>
+      <li><a href="#anatomy">Anatomy</a></li>
+      <li><a href="#structure">Page Structure</a></li>
+      <li><a href="#boxmodel">Box Model</a></li>
+      <li><a href="#positioning">Positioning</a></li>
+      <li><a href="#fontsizes">Font Sizes</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
